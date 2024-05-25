@@ -1,0 +1,15 @@
+<h1>Results</h1>
+
+<p> The word is: <%= @word %></p>
+<% if @included %>
+  <%if @english_word %>
+    <p><strong>Congratulations!</strong><%= @word%> is a valid English word</p>
+  <% else %>
+    <p>Sorry but<%= @word %> is not an English word</p>
+  <%end%>
+<%else%>
+  <p> Sorry but <%= @word %> cant be build out of <%= @letters %></p>
+<% end %>
+<p>
+<%= link_to "Play Again", new_path %>
+</p>
